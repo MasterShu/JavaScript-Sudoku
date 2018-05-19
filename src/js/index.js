@@ -1,13 +1,6 @@
-function createRow(v = 0) {
-    const array = new Array(9)
-    array.fill(v)
-    return array
-}
+import Grid from './ui/grid';
 
-function createMatrix(v = 0) {
-    return Array.from({length: 9}, () => createRow(v))
-}
+const grid = new Grid($('#container'))
 
-const a = createMatrix()
-a[0][1] = 2
-console.log(a)
+grid.build()
+grid.layout()
